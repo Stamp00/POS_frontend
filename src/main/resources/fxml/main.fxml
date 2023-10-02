@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="app.MyController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane fx:id="tabTable" prefHeight="479.0" prefWidth="661.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="tabCash" text="Cashere">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane fx:id="cashSplit" dividerPositions="0.7314112291350531" prefHeight="449.0" prefWidth="661.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <TableView fx:id="cashTableView" layoutX="62.0" layoutY="78.0" prefHeight="447.0" prefWidth="479.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="IdTable" prefWidth="151.0" text="ID" />
+                                                        <TableColumn fx:id="NameTable" prefWidth="155.0" text="Name" />
+                                                        <TableColumn fx:id="PriceTable" prefWidth="172.0" text="Price" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <Button fx:id="finish" onAction="#handleFinishButton" layoutX="6.0" layoutY="371.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="162.0" text="Finish" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" />
+                                                <Button fx:id="add" onAction="#handleAddButton" layoutX="92.0" layoutY="225.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="72.0" text="add" AnchorPane.bottomAnchor="160.0" />
+                                                <Button fx:id="card" onAction="#handleCardButton" layoutX="92.0" layoutY="298.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="72.0" text="card" AnchorPane.bottomAnchor="87.0" />
+                                                <Button fx:id="cash" onAction="#handleCashButton" layoutX="10.0" layoutY="298.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="72.0" text="cash" AnchorPane.bottomAnchor="87.0" />
+                                                <Button fx:id="remove" onAction="#handleRemoveButton" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="72.0" text="remove" AnchorPane.bottomAnchor="160.0" />
+                                                <TextField fx:id="IdInput" layoutX="7.0" layoutY="193.0" AnchorPane.bottomAnchor="232.0" />
+                                                <Text layoutX="10.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID:" wrappingWidth="72.0" AnchorPane.bottomAnchor="257.0" />
+                                                <ImageView fx:id="img" fitHeight="95.0" fitWidth="132.0" layoutX="21.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="21.0" />
+                                                <Text layoutX="66.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:" AnchorPane.topAnchor="14.0" />
+                                                <Text layoutX="48.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00$" wrappingWidth="78.5078125" AnchorPane.topAnchor="31.0">
+                                                    <font>
+                                                        <Font size="29.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Manager">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane fx:id="managerSplitPane" dividerPositions="0.6934749620637329" prefHeight="449.0" prefWidth="661.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <TableView fx:id="managerTable" layoutX="77.0" layoutY="77.0" prefHeight="447.0" prefWidth="454.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="id" prefWidth="118.0" text="ID" />
+                                                        <TableColumn fx:id="name" prefWidth="81.0" text="Name" />
+                                                        <TableColumn fx:id="price" prefWidth="60.0" text="Price" />
+                                                        <TableColumn fx:id="tax" prefWidth="72.0" text="Tax" />
+                                                        <TableColumn fx:id="Quant" prefWidth="122.0" text="Quantity" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <TextField fx:id="inputTax" layoutX="22.0" layoutY="126.0" prefHeight="23.0" prefWidth="160.0" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="22.0" />
+                                                <TextField fx:id="InputQuant" layoutX="22.0" layoutY="171.0" prefHeight="23.0" prefWidth="160.0" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="22.0" />
+                                                <TextField fx:id="inputPrice" layoutX="22.0" layoutY="103.0" prefWidth="160.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="22.0" />
+                                                <TextField fx:id="inputName" layoutX="22.0" layoutY="36.0" prefWidth="160.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="22.0" />
+                                                <Text layoutX="81.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" AnchorPane.bottomAnchor="411.0" AnchorPane.leftAnchor="81.0" />
+                                                <Text layoutX="83.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="83.0" />
+                                                <Text layoutX="87.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax:" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="87.0" />
+                                                <Text layoutX="72.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" wrappingWidth="52.21630859375" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="72.0" />
+                                                <Button fx:id="addProduct" onAction="#handleAddProductButton" layoutX="24.0" layoutY="220.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" text="Add Product" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="22.0" />
+                                                <Button fx:id="deleteProduct" onAction="#handleDeleteProductButton" layoutX="22.0" layoutY="260.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" text="Delete Product" AnchorPane.bottomAnchor="153.0" AnchorPane.leftAnchor="22.0" />
+                                                <Button fx:id="addQuant" onAction="#handleAddQuantityButton" layoutX="22.0" layoutY="300.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" text="Add Quantity" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="22.0" />
+                                                <Button fx:id="removeQuant" onAction="#handleRemoveQuantityButton" layoutX="22.0" layoutY="340.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" text="Remove Quantity" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="22.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Stats">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.6783004552352049" layoutX="40.0" layoutY="65.0" prefHeight="449.0" prefWidth="661.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <StackedAreaChart prefHeight="214.0" prefWidth="226.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <xAxis>
+                                                        <NumberAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </StackedAreaChart>
+                                                <StackedBarChart layoutX="244.0" prefHeight="219.0" prefWidth="211.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </StackedBarChart>
+                                                <ScatterChart layoutX="14.0" layoutY="229.0" prefHeight="218.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </ScatterChart>
+                                                <BubbleChart layoutX="96.0" layoutY="145.0" prefHeight="211.0" prefWidth="216.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                    <xAxis>
+                                                        <NumberAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </BubbleChart>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <Button layoutX="27.0" layoutY="187.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="156.0" text="SHOW STATS" />
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane layoutX="131.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Customer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.725752508361204" layoutX="100.0" layoutY="70.0" prefHeight="369.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <TableView fx:id="customerTable" layoutX="55.0" layoutY="75.0" prefHeight="367.0" prefWidth="431.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="idColumn" prefWidth="199.0" text="ID" />
+                                                        <TableColumn fx:id="NameColumn" prefWidth="137.0" text="Name" />
+                                                        <TableColumn fx:id="priceColumn" prefWidth="94.0" text="Price" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <Text layoutX="59.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="10.0" />
+                                                <Text layoutX="23.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00$" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="30.0">
+                                                    <font>
+                                                        <Font size="43.0" />
+                                                    </font>
+                                                </Text>
+                                                <Button fx:id="pay" layoutX="14.0" layoutY="277.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="134.0" text="pay" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="14.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
